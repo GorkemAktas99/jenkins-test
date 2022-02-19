@@ -6,7 +6,7 @@ pipeline {
     stages{ // where the "work" happens
         stage("build"){
             steps{
-                sh 'docker container run -it ubuntu /bin/bash'
+                sh 'docker container run -i ubuntu /bin/bash'
                 sh 'whoami'
                 echo 'building the applicatin'
                 echo BRANCH_NAME
