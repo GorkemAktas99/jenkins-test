@@ -3,7 +3,7 @@ pipeline {
     stages{ // where the "work" happens
         stage("build"){
             steps{
-                sh 'python3 --version'
+                sh 'apt install python'
                 echo 'building the applicatin'
             }
         }
