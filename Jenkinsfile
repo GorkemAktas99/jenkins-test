@@ -9,6 +9,7 @@ pipeline {
                 sh 'apt install docker.io -y'
                 sh 'docker container ls -a'
                 echo 'building the applicatin'
+                echo BRANCH_NAME
             }
         }
         stage("test"){
