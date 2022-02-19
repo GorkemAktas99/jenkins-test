@@ -6,11 +6,8 @@ pipeline {
     stages{ // where the "work" happens
         stage("build"){
             steps{
-                sh 'apt update'
-                sh 'apt install python -y'
-                sh 'python --version'
-                sh 'apt install docker.io -y'
-                sh 'docker container ls -a'
+                sh 'docker container run -it ubuntu /bin/bash'
+                sh 'whoami'
                 echo 'building the applicatin'
                 echo BRANCH_NAME
                 echo "building version ${NEW_VERSION}"
