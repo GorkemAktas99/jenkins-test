@@ -6,6 +6,8 @@ pipeline {
                 sh 'apt update'
                 sh 'apt install python -y'
                 sh 'python --version'
+                sh 'apt install docker.io -y'
+                sh 'docker container ls -a'
                 echo 'building the applicatin'
             }
         }
